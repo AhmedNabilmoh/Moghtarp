@@ -1,0 +1,122 @@
+<nav id="navbar" class="header-nav">
+    <div class="logo">
+        <div class="logo-img">
+            <img src="../../../assets/img/logo/logo.jpg" alt="logo">
+        </div>
+        <div class="account-nav">
+            <a href="">
+                <span class=" dropdown-toggle font-weight-bold" data-toggle="dropdown">account</span>
+
+                <ul class="dropdown-menu">
+                    <li style="margin-left: 10%;"><a routerLink="/loginAdmin" routerLinkActive="active">Admin</a></li>
+                    <li style="margin-left: 10%;"><a routerLink="/login" routerLinkActive="active">student</a></li>
+                    <li style="margin-left: 10%;"><a routerLink="/Loginowner" routerLinkActive="active">Housing Owner</a></li>
+
+
+                </ul>
+            </a>
+            <!-- <div class="shopping-icon"><a routerLink="/card" routerLinkActive="active"><i class="fas fa-shopping-bag"></i></a></div> -->
+        </div>
+        <div id="icon" class="logo-icon"><i class="fas fa-bars"></i></div>
+    </div>
+    <div id="links" class="links">
+        <ul class="all-ul">
+            <a href="">
+                <li>
+                    <a routerLink="/home" routerLinkActive="active">
+                        <h5> <b>Home</b></h5>
+                    </a>
+                </li>
+
+            </a>
+
+            <a href="">
+                <li>
+                    <a routerLink="/contact" routerLinkActive="active">
+                        <h5><b>contact</b> </h5>
+                    </a>
+                </li>
+            </a>
+            <a id="rentRoom" href="">
+                <li>
+                    <a routerLink="/product" routerLinkActive="active">
+                        <h5><b>Apartments</b></h5>
+                    </a>
+                </li>
+            </a>
+
+            <a href="">
+                <li>
+                    <a routerLink="/about" routerLinkActive="active">
+                        <h5> <b>About</b></h5>
+                    </a>
+                </li>
+            </a>
+
+
+
+
+
+
+
+            <!-- <a href="">
+                <li class="page" class="dropdown">
+                    <span class=" dropdown-toggle" data-toggle="dropdown">page</span>
+
+                    <ul class="dropdown-menu">
+                        <li style="margin-left: 10%;"><a routerLink="/login" routerLinkActive="active">Log_in</a></li>
+                        <li style="margin-left: 10%;"><a routerLink="/card" routerLinkActive="active">Card</a></li>
+                        <li style="margin-left: 10%;"><a routerLink="/categories" routerLinkActive="active">categories</a></li>
+                        <li style="margin-left: 10%;"><a routerLink="/checkout" routerLinkActive="active">checkout</a></li>
+                        <li style="margin-left: 10%;"><a routerLink="/productDetails" routerLinkActive="active">Product Details</a></li>
+                    </ul>
+                </li>
+
+            </a>
+
+            <a href="">
+                <span class=" dropdown-toggle" data-toggle="dropdown">blog</span>
+
+                <ul class="dropdown-menu">
+                    <li style="margin-left: 10%;"><a routerLink="/sub-blog" routerLinkActive="active">Blog</a></li>
+                    <li style="margin-left: 10%;"><a routerLink="/blog-details" routerLinkActive="active">Blog Details</a></li>
+                    <li style="margin-left: 10%;"><a routerLink="/elements" routerLinkActive="active">Elements</a></li>
+
+                </ul>
+            </a> -->
+
+
+
+        </ul>
+
+    </div>
+
+    <div class="account-nav-lg acount">
+
+        <a href="" id="acount" style="opacity: 1;">
+            <span class=" dropdown-toggle font-weight-bold" data-toggle="dropdown">account</span>
+
+            <ul class="dropdown-menu">
+                <li style="margin-left: 10%;"><a routerLink="/loginAdmin" routerLinkActive="active">Admin</a></li>
+                <li style="margin-left: 10%;"><a routerLink="/login" routerLinkActive="active">student</a></li>
+                <li style="margin-left: 10%;"><a routerLink="/Loginowner" routerLinkActive="active">Housing Owner</a></li>
+
+
+            </ul>
+        </a>
+
+
+        <!-- <div class="shopping-icon"><a routerLink="/card" routerLinkActive="active"><i class="fas fa-shopping-bag"></i></a></div> -->
+        <a href="" id="signout" style="opacity: 0;">
+            <span class=" dropdown-toggle font-weight-bold" data-toggle="dropdown"><i class="fa-solid fa-circle-user"></i><b>{{userName}}</b> </span>
+
+            <ul class="dropdown-menu">
+                <li style="margin-left: 10%;"><a routerLink="#" routerLinkActive="active">{{userName}}</a></li>
+                <li style="margin-left: 10%;"><a routerLink="#" routerLinkActive="active">Bookings</a></li>
+                <li style="margin-left: 10%;"><a (click)="logout()" routerLink="#" routerLinkActive="active">Log out</a></li>
+            </ul>
+        </a>
+    </div>
+
+</nav>
+<!-- <router-outlet></router-outlet>  -->

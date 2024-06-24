@@ -1,0 +1,104 @@
+<!--use directive ng form to mointor to all input-->
+<form [formGroup]="registrationForm" (submit)="add()" style="height: 750px;" action="" method="get" class="register-form-area" id="loginco">
+    <app-header-nav></app-header-nav>
+    <div class="container">
+        <!--print all input by pipe jsone-->
+
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8">
+
+
+                <div class="register-form text-center">
+                    <!-- Login Heading -->
+                    <div class="register-heading">
+                        <div class="row">
+                            <div class="col-7"></div>
+
+                            <div class="col-3"><a class="loginsinup" routerLink="/signUp" routerLinkActive="active">Sign Up</a></div>
+                            <div class="col-2"> <a class="loginsinup" routerLink="/login" routerLinkActive="active"> Login</a></div>
+                        </div>
+                        <span>Sign Up</span> {{roomList|json}}
+                        <p>Create your account to get full access</p>
+                        <!-- <small>{{userDate|json}}</small>-->
+                        <!-- <small> {{registrationForm.value | json}}</small> -->
+                    </div>
+                    <!-- Single Input Fields -->
+                    <div class="input-box">
+                        <div class="single-input-fields">
+                            <label>Full name</label>
+                            <!--use trv and class bootstrap is invalid-->
+                            <input formControlName="name" type="text" placeholder="Enter full name" name="name">
+                            <div *ngIf="fullName.invalid && fullName.touched">
+                                <small *ngIf="fullName.errors.required" class="text-danger">user Name fiels is requird </small>
+                                <small *ngIf="fullName.errors.minlength" class="text-danger"> user Name minlength at least 4 character</small>
+                                <small class="text-danger" *ngIf="fullName.errors.forbiddenName"> {{fullName.errors.forbiddenName.value}} user Name Not Allowed</small>
+                            </div>
+
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Email Address</label>
+                            <input formControlName="email" type="email" placeholder="Enter email address" name="email">
+                            <div *ngIf="emailAddress.invalid && emailAddress.touched">
+                                <small *ngIf="emailAddress.invalid &&emailAddress.touched" class="text-danger">Email Address Not Valid </small>
+                            </div>
+
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Phone</label>
+                            <input formControlName="number" type="number" placeholder="Enter your number" name="phone">
+
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Adress</label>
+                            <input formControlName="adress" type="text" placeholder="Enter your Adress" name="adress">
+
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Faculty</label>
+                            <select formControlName="faculty" id="inputState" class="form-control">
+                              <option selected>Science</option>
+                              <option selected>Agriculture</option>
+                              <option selected>Medicine</option>
+                              <option selected>Pharamacy</option>
+                              <option selected>Veterinary</option>
+                              <option selected>Commerce</option>
+                              <option selected>Eduction</option>
+                              <option selected>Law</option>
+                              <option selected>Physical</option>
+                              <option selected>Nursing</option>
+                              <option selected>specific Education</option>
+                              <option selected>Social Work</option>
+                              <option selected>Literature</option>
+                              <option selected>FCI</option>
+                              <option selected>Dentistry</option>
+                              <option selected>Engineering</option>
+
+                            </select>
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Password</label>
+                            <input formControlName="password" type="password" placeholder="Enter Password" name="password">
+
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Confirm Password</label>
+                            <input type="password" formControlName="confPassword" placeholder="Confirm Password" name="Confpassword">
+                            <div *ngIf="registrationForm.errors?.misMath">
+                                <small class="text-danger" *ngIf="registrationForm.errors.misMath"> ConfirmPassword does not Match the Password </small>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- form Footer -->
+                    <div class="register-footer">
+                        <p> Already have an account? <a routerLink="/login" routerLinkActive="active"> Login</a> here
+                        </p>
+                        <button class="submit-btn3" [disabled]="!registrationForm.valid">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div style=" margin-top: 40% ;"></div>

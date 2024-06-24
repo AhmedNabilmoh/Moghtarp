@@ -1,0 +1,82 @@
+<app-header-nav></app-header-nav>
+<form (submit)="onSubmit()" [formGroup]="registrationForm1" style="height: 750px;" class="register-form-area" id="loginco">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8">
+                <div class="register-form text-center">
+                    <!-- Login Heading -->
+                    <div class="register-heading">
+                        <div class="row">
+                            <div class="col-7"></div>
+                            <div class="col-3"><a class="loginsinup" style="font-size: larger;" routerLink="/SignUpOwner" routerLinkActive="active">Sign Up</a></div>
+                            <div class="col-2"> <a class="loginsinup" style="font-size: larger;" routerLink="/Loginowner" routerLinkActive="active"> Login</a></div>
+                        </div>
+                        <span>Sign Up</span>
+                        <p>Create your account to get full access to Housing owner</p>
+                        <!-- <small> {{registrationForm1.value | json}}</small> -->
+                    </div>
+                    <!-- Single Input Fields -->
+                    <div class="input-box">
+                        <div class="single-input-fields">
+                            <label>Full name</label>
+                            <input [class.is-invalid]="fullName.invalid &&fullName.touched" formControlName="name" type="text" placeholder="Enter full name">
+                            <div *ngIf="fullName.invalid && fullName.touched">
+                                <small *ngIf="fullName.errors.required" class="text-danger">user Name fiels is requird </small>
+                                <small *ngIf="fullName.errors.minlength" class="text-danger"> user Name minlength at least 4 character</small>
+                                <small class="text-danger" *ngIf="fullName.errors.forbiddenName"> {{fullName.errors.forbiddenName.value}} user Name Not Allowed</small>
+                            </div>
+
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Phone</label>
+                            <input type="number" formControlName="number" placeholder="Enter your number" name="phone">
+                            <div *ngIf="number.invalid && number.touched">
+                                <small *ngIf="number.errors.required" class="text-danger">number fiels is requird </small>
+                                <small *ngIf="number.errors.minlength" class="text-danger"> number minlength at least 11 number</small>
+
+                            </div>
+
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Address</label>
+                            <input type="text" formControlName="address" placeholder="Enter your Adress">
+
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Email Address</label>
+                            <input [class.is-invalid]="emailAddress.invalid &&emailAddress.touched" formControlName="email" type="email" placeholder="Enter full name">
+                            <div *ngIf="emailAddress.invalid && emailAddress.touched">
+                                <small *ngIf="emailAddress.invalid &&emailAddress.touched" class="text-danger">Email Address Not Valid </small>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="single-input-fields">
+                            <label>Password</label>
+                            <input type="password" formControlName="password" placeholder="Enter Password">
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Confirm Password</label>
+                            <input [class.is-invalid]="registrationForm1.errors?.misMath " type="password" formControlName="confPassword" placeholder="Confirm Password">
+                            <div *ngIf="registrationForm1.errors?.misMath">
+                                <small class="text-danger" *ngIf="registrationForm1.errors.misMath"> ConfirmPassword does not Match the Password </small>
+                                <small *ngIf="registrationForm1.errors.minlength" class="text-danger"> password minlength at least 8 character</small>
+                            </div>
+                        </div>
+                        <h6 style="color: red;"><b>{{errvar}}</b></h6>
+                    </div>
+                    <!-- form Footer -->
+                    <div class="register-footer">
+                        <p> Already have an account? <a routerLink="/Loginowner" routerLinkActive="active"> Login</a> here</p>
+                        <button class="submit-btn3" [disabled]="!registrationForm1.valid">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div style="margin-top: 30%;"></div>

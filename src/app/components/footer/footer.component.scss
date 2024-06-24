@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    width: 100px;
+    color: #fff;
+    opacity: .7;
+    text-transform: capitalize;
+    transition: all .5s ease;
+    margin-bottom: .5rem;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FD8F5F;
+    opacity: unset;
+    text-decoration: underline;
+}
+
+footer {
+    background: #010A44;
+    opacity: .9;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    article {
+        width: 85%;
+        margin: 0 auto;
+        .footer-components {
+            p {
+                color: #fff;
+                opacity: .8;
+                margin-top: 2rem;
+                line-height: 2;
+            }
+            .icons {
+                color: #fff;
+                span {
+                    display: inline-block;
+                    margin-right: 2rem;
+                    margin-top: 1rem;
+                    margin-bottom: 3rem;
+                    font-size: 20px;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    transition: all .7s ease;
+                    .fa-facebook-f {
+                        padding: .3rem .7rem;
+                    }
+                    .fa-twitter {
+                        padding: .3rem .4rem;
+                    }
+                    .fa-pinterest-p {
+                        padding: .3rem .5rem;
+                    }
+                }
+                span:hover {
+                    background: #FD8F5F;
+                    transform: rotateY(180deg);
+                    border-color: #FD8F5F;
+                    cursor: pointer;
+                }
+            }
+            .quick-links,
+            .shop-category,
+            .pertners {
+                margin-bottom: 3rem;
+                h4 {
+                    color: #fff;
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .footer-info {
+            text-align: center;
+            margin-top: 3rem;
+            color: #fff;
+            opacity: .7;
+            text-transform: capitalize;
+        }
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .footer-components {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .social {
+            width: 50%;
+        }
+        .shop-category {
+            width: 50%;
+        }
+        .quick-links,
+        .shop-category,
+        .pertners {
+            a {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .footer-components {
+        .social {
+            width: 25%;
+        }
+        .shop-category {
+            width: unset;
+        }
+    }
+}

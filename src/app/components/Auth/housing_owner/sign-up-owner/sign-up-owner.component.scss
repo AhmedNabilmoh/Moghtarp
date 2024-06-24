@@ -1,0 +1,99 @@
+.register-form-area{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    .loginsinup{ font-size: larger; background-color:#555; border-radius: 40%;} 
+   
+    .register-form{
+        background:#fff;
+        padding: 55px 60px 50px 50px;
+        box-shadow: 0px 10px 30px 0px rgba(13, 12, 13, 0.2);
+         margin-top: 5px;
+        
+        .register-heading{
+            text-align: center;
+            span{
+                color: #140C40;
+                font-size: 30px;
+                font-weight: 600;
+                margin-bottom: 16px;
+                display: block;
+                text-transform: capitalize;
+            }
+           
+        }
+        // Input Box
+        .input-box{
+            // padding-top: 35px;
+            padding-bottom: 55px;
+          
+            .single-input-fields{
+                label {
+                    display: block;
+                    font-size: 17px;
+                    margin-bottom: 6px;
+                    color: #140C40;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    text-align: left;
+                 }
+                 input {
+                    border: 1px solid #C9C9C9;
+                     width: 100%;
+                     height: 35px;
+                     margin-bottom: 20px;
+                     padding: 0 25px;
+                     color: #000;
+                     &::placeholder{
+                         color: #777777;
+                         font-weight: 300;
+                         font-size: 13px;
+                     }
+                 }
+             }
+
+        }
+        .register-footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          
+            button {
+                background-color: #FD8F5F;
+                padding: 4.5% 11% 8% 11%;
+                border: none;
+                border-radius: 0;
+                margin-top: -90px;
+                height:50px ;
+            }
+            p{
+                margin: 0;
+                padding-bottom: -4%;
+                margin-top: -90px;
+                font-size: 0.9em;
+                color: #6c757d;
+              
+                a{
+                    color: #FD8F5F;
+                }
+               
+            }
+        }
+
+    }
+}
+
+#loginco {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("../../../../../assets/img/hero/h1_hero.png");
+    background-size: cover;
+    /* Full height */
+    height: 41em;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    // height: 100vh !important;
+}

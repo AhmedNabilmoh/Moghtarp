@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #loginco {
+            height: 750px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<body>
+    <app-header-nav></app-header-nav>
+    <div id="loginco">
+
+        <div id="loginbk">
+
+            <form (submit)="onSubmit()" [formGroup]="registrationForm" action="" method="get">
+                <div id="toplogin">
+                    <div class="row">
+                        <div class="col-7"></div>
+                        <div class="col-3"><a class="loginsinup" routerLink="/SignUpOwner" routerLinkActive="active">Sign Up</a></div>
+                        <div class="col-2"> <a class="loginsinup" routerLink="/Loginowner" routerLinkActive="active"> Login</a></div>
+                    </div>
+                    <h3> Login</h3>
+                    <h6>Enter Login details to get access housing owner</h6>
+
+                </div>
+                <div class="form-group">
+                    <label class="boxTitle" for="exampleInputEmail1"> Email Address</label>
+                    <input formControlName="emailAddress" [class.is-invalid]="emailAddress.invalid && emailAddress.touched" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" Email address">
+                    <div *ngIf="emailAddress.invalid && emailAddress.touched">
+                        <small *ngIf="emailAddress.invalid && emailAddress.touched" class="text-danger">Email Address Not Valid </small>
+                        <small class="text-danger" *ngIf="emailAddress.errors.forbiddenName"> {{emailAddress.errors.forbiddenName.value}} emailAddress Not Allowed</small>
+
+                    </div>
+                </div>
+                <div id="passdiv" class="form-group">
+                    <label class="boxTitle" for="exampleInputPassword1">Password</label>
+                    <input [class.is-invalid]="password.invalid && password.touched" formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                    <div *ngIf="password.invalid && password.touched">
+                        <small *ngIf="password.errors.required" class="text-danger">password fiels is requird </small>
+                    </div>
+                </div>
+                <h6 style="color: red;"><b>{{errvar}}</b></h6>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label for="exampleCheck1">Keep Me Logged In </label> <a routerLink="/login" routerLinkActive="active">Forgot Password?</a>
+                </div>
+                <p>Don’t have an account? <a routerLink="/SignUpOwner" routerLinkActive="active">Sign Up </a> here</p>
+                <button class="" [disabled]="!registrationForm.valid">Login</button>
+            </form>
+            <!-- form Footer -->
+        </div>
+    </div>
+
+
+
+
+</body>

@@ -1,0 +1,152 @@
+$color1:#FD8F5F;
+$color2:#273953;
+$color3:#010A44;
+$color4:#7F85A8;
+$color5:#670000;
+$color6:#DF8E02;
+$shadow:0 0 5px grey;
+article .article {
+    background-color: $color2;
+    // border-radius: 3%;
+}
+
+article {
+    border-radius: 7% 0% 0% 7%;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+// .flt-left
+// {
+//     float: left;
+// }
+// .clear{clear: both;}
+article {
+    .popular-pro-text {
+        text-align: center;
+        margin-top: 5rem;
+        h2 {
+            text-transform: uppercase;
+        }
+        p {
+            text-transform: capitalize;
+            color: $color4;
+            line-height: 2;
+        }
+    }
+    .popular-pro-nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 4rem;
+        .nav-btns {
+            border-bottom: 1px solid rgb(207, 206, 206);
+            .btn {
+                text-transform: capitalize;
+                font-size: 20px;
+                line-height: 3;
+                letter-spacing: 1px;
+            }
+            .btn:hover {
+                border-bottom: 1px solid $color2;
+            }
+            .sofa {
+                border-bottom: 1px solid $color1;
+                color: $color1;
+            }
+            .sofa:hover {
+                border-bottom: 1px solid $color1;
+                color: $color1;
+            }
+        }
+    }
+    .popular-pro-products {
+        .popular-product1 {
+            margin-top: 5rem;
+            text-align: center;
+            margin-bottom: 5rem;
+            h4 {
+                font-weight: 400;
+                a {
+                    font-size: 22px;
+                    color: #000;
+                }
+            }
+            h5 {
+                color: $color5;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+// @media only screen and (min-width:882px) {
+//     .popular-pro-products {
+//         width: 90%;
+//         margin: auto;
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: space-between;
+//         .popular-product1 {
+//             width: 45%;
+//             box-shadow: $shadow;
+//         }
+//     }
+// }
+// @media only screen and (min-width:1200px) {
+//     .popular-pro-products {
+//         width: 90%;
+//         margin: auto;
+//         display: flex;
+//         flex-wrap: wrap;
+//         // justify-content: space-between;
+//         .popular-product1 {
+//             width: 30%;
+//         }
+//     }
+// }
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+.col {
+    color: aliceblue;
+}

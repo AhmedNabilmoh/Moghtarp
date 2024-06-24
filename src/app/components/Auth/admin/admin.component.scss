@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+#loginco {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("../../../../assets/img/hero/h1_hero.png");
+    background-size: cover;
+    /* Full height */
+    height: 41em;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    // height: 100vh !important;
+}
+
+#loginbk {
+    box-shadow: 0.2px 0px 20px #b9babb;
+    width: 75%;
+    background-color: white;
+    position: relative;
+    left: 12%;
+    height: 100%;
+    padding: 8%;
+    button {
+        background-color: #FD8F5F;
+        padding: 4.5% 11% 4.5% 11%;
+        border: none;
+        border-radius: 0;
+      
+    }
+    h3 {
+        font-weight: bolder;
+        padding-bottom: 3.4%;
+    }
+    h6 {
+        font-size: small;
+        color: #6c757d;
+        padding-bottom: 12%;
+    }
+    #toplogin {
+        text-align: center;
+    }
+    a {
+        font-size: small;
+        color: #FD8F5F;
+    }
+    p {
+        padding-bottom: 4%;
+        font-size: 0.9em;
+        color: #6c757d;
+    }
+    input {
+        border-radius: 0px;
+        padding: 6%;
+        &::placeholder {
+            font-size: small;
+            color: #a8adb1;
+        }
+    }
+    #passdiv {
+        padding-bottom: 5%;
+    }
+    .form-check {
+        padding-bottom: 20%;
+        label {
+            padding-right: 30%;
+            font-weight: bold;
+        }
+        input:active {
+            background-color: #FD8F5F;
+            color: white;
+        }
+    }
+}
+
+.boxTitle {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 600px) {
+    #loginbk {
+        width: 50%;
+        left: 25%;
+        height: 96%;
+        padding-top: 1%;
+        top: 2%;
+        padding: 4%;
+        h6 {
+            padding-bottom: 10%;
+        }
+        button {
+            padding: 3% 7% 3% 7%;
+        }
+        #passdiv {
+            padding-bottom: 1%;
+        }
+        input {
+            padding: 4.5%;
+        }
+        .form-check {
+            padding-bottom: 10%;
+            label {
+                padding-right: 50%;
+                font-weight: bold;
+            }
+        }
+    }
+    p {
+        float: left;
+        padding-right: 32%;
+    }
+    .btn-primary {
+        margin-top: -9%;
+    }
+}
+
+#loginco {
+    height: 41em;
+}

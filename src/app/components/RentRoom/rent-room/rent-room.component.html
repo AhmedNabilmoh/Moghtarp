@@ -1,0 +1,70 @@
+<!-- <form #rentRoom="ngForm" class="register-form-area" (ngSubmit)="onSubmit(rentRoom.value)" >
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8">
+                <div class="input-box">
+        first name<br>
+        <input type="text" name="fn" ngModel class="n1" placeholder="enter first name" ><br>
+        last name<br>
+        <input type="text" name="lname" ngModel class="n2" placeholder="enter second name" ><br>
+        determine number of Rooms<br>
+        <input type="number" name="numRoom" ngModel class="room" placeholder="number of Rooms" ><br>
+        determine number of Members<br>
+        <input type="number" name="numMember"ngModel class="Members" placeholder="number of Members" ><br>
+        determine The price<br>
+        <input type="number" name="price" ngModel class="price" placeholder="determine price " ><br>
+        <button type="submit" class="">submit</button>
+    </div>
+    </div>
+    </div>
+</div>
+</form> -->
+<div class="container">
+
+    <form action="" method="get" class="register-form-area" [formGroup]="r_room" (ngSubmit)="message()">
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <h3><b>Appartment Detsils</b></h3>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row justify-content-center">
+
+                <div class="col-xl-12 col-lg-12">
+
+
+                    <br><br>
+                    <div class="input-box">
+                        <div class="col">Number Of Room</div>
+
+                        <br>
+                        <input formControlName="num_rooms" type="number" class="col-lg-12" placeholder="enter the number of rooms"><br>
+                        <div class="col">Determine The Price</div> <br>
+                        <input formControlName="price" type="number" class="col-lg-12" placeholder="enter the price"><br>
+                        <div class="col"> Determine The Price of service</div> <br>
+                        <input formControlName="price_service" type="number" class="col-lg-12" placeholder="enter the price of service"><br>
+                        <div class="col"> Determine number of beds</div><br>
+                        <input formControlName="beds" type="number" class="col-lg-12" placeholder="enter the number of beds"><br>
+                        <div class="col">Male/Famele</div>
+                        <select name="cars" id="cars" formControlName="select">
+          <option value="Male">Male</option>
+          <option value="Famele">Famele</option>
+        </select><br>
+                        <div class="col">Determine The address</div><br>
+                        <input formControlName="address" type="text" class="price" placeholder="enter the address"><br>
+                        <div class="col"> Describe your appartment</div><br>
+                        <input formControlName="describe" type="text" class="price" placeholder="enter the description of appartment"><br>
+
+                        <label for="myfile">Select Images:</label>
+                        <input formControlName="file" type="file" id="myfile" name="myfile" multiple><br><br>
+                        <button type="submit" class="submit-btn3 col-1">submit</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>

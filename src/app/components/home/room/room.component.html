@@ -1,0 +1,99 @@
+<article class="container">
+    <section class="popular-pro-text">
+        <div class="animated animatedFadeInUp fadeInUp">
+            <h2 style="color: #273953;" class="col">Apartments</h2>
+            <p class="col">check All Apartment here</p>
+        </div>
+    </section>
+    <div class="row">
+        <div class="col-3"></div>
+        <div style="border-radius: 5%;" *ngFor="let room of roomList" class="article build popular-pro-products col-sm-12 col-md-12 col-lg-6">
+            <div class="popular-product1">
+                <img style="width: 100%; height: 70%; " src="../../../../assets/img/room/{{room.id}}.jpg" alt="popular product">
+                <div style="width: 100%; background-color: cadetblue;">
+                    <span class="col" class="col-12">{{room.price}} LE monthly</span>
+                    <!-- <span class="col-1"></span>-->
+                    <span class="col-12">{{room.gender}}</span>
+                </div>
+                <div style="background-color: khaki;">
+                    <h4><a href="https://www.google.com/maps/search/Assuit%2Fseed+factory%2FAl-sabeel%2F+st.sayed+marzouq%2Fin+front+of+Afandina+Restaurnt/@27.1770292,31.2194376,13z/data=!3m1!4b1">{{room.address}}</a></h4>
+                    <h5 class="col-12"><span class="col-5"><i class="fa fa-light fa-star"></i> <i class="fa fa-light fa-star"></i> <i class="fa fa-light fa-star"></i>  <i class="fa fa-light fa-star"></i> <i class="fa fa-light fa-star"></i></span> <span class="col-4"> </span>                        <span class="col-3"></span></h5>
+                </div>
+
+                <div class="row">
+                    <div class="col-4"> <b class="col">Rooms in department</b> </div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-4 col">{{room.num_room}} Rooms</div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col"> <b>Beds in Room  </b> </div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-4 col">{{room.num_beds}} Bed</div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col"> <b>Price Services in Room</b> </div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-4 col">{{room.price_services}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-4 col"> <b>Description </b> </div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                    <div class="col-4 col">It has a balcony overlooking the street and is located on the 11th floor</div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div style="font-size: 20px;" class="col-2 col"><b style="text-align: center; ">Services</b></div>
+                    <div class="col-5"></div>
+                </div>
+
+                <div class="row">
+
+                    <table style="border: 1px solid #777;" class="col-12">
+
+
+
+                        <tr style="border: 1px solid #777;">
+                            <td class="col" style="border: 1px solid #777;">internet <i class="fa fa-solid fa-check"></i> </td>
+                            <td class="col" style="border: 1px solid #777;">Elevator <i class="fa fa-times" aria-hidden="true"></i></td>
+                            <td class="col" style="border: 1px solid #777;">conditioner <i class="fa fa-times" aria-hidden="true"></i></td>
+                            <td class="col" style="border: 1px solid #777;">period cleaning <i class="fa fa-times" aria-hidden="true"></i></td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-3"></div>
+    </div>
+
+</article>
